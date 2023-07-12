@@ -1,19 +1,20 @@
 ﻿using System;
 
-namespace Fibonacci
+namespace FIBONACCI
 {
     class SEQUENCE
     {
-        /* STORE INITIAL VALUES */
-        // p3 => Sum of two previous terms
+        /* INITIAL VALUES  */
         static int p1 = 0, p2 = 1, p3;
         static void Main(string[] args)
         {
-            Console.WriteLine("Please provide an input: (e.g 10) ");
+            Console.WriteLine("Please provide an input value: (e.g 10) ");
+            // READ INPUT VALUE AND CONVERT IT TO AN INTEGER
             int count = Int32.Parse(Console.ReadLine());
+            // PRINT THE INITIAL VALUES IN THE SEQUENCE i.e 0, 1, 1
             Console.Write($"{p1} {p2}");
 
-            // ITERATE UNTIL THE VALUE OF count IS NO LONGER LESS THAN 2
+            // ITERATE UNTIL THE VALUE OF count IS NO LONGER GREATER THAN i
             for (var i = 2; i < count; i++)
             {
                 p3 = p1 + p2;
