@@ -9,7 +9,7 @@ namespace Fibonacci
         static int p1 = 0, p2 = 1, p3;
         static void Main(string[] args)
         {
-            Console.WriteLine("Please provide an input: (e.g 10) ");
+            Console.WriteLine("***** Please provide an input: (e.g 10) *****");
             int count = Int32.Parse(Console.ReadLine());
             Console.Write($"{p1} {p2}");
 
