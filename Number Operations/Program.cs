@@ -1,11 +1,11 @@
 ﻿namespace OPERATIONS
-{ 
+{
     class NUMBER_OPERATIONS
     {
         static void Main()
         {
             /* PRINT ODD NUMBERS */
-            Console.WriteLine("Please provide a range: ");
+            Console.WriteLine("NUMBER OPERATIONS\n***Generate Odd Numbers***\nPlease provide a range: ");
             GENERATE_ODD_NUMBERS();
 
             Console.WriteLine("\nProceed to generate Even Numbers or press Ctrl + C to exit...");
@@ -19,6 +19,10 @@
             /* PRINT FIZZ BUZZ SEQUENCE */
             Console.WriteLine("\nPlease provide a range: ");
             GENERATE_FIZZ_BUZZ_SEQUENCE();
+
+            /* CALCULATE FACTORIAL */
+            Console.WriteLine("Proceed to Calculate Factorial or press Ctrl + C to exit...");
+            FACTORIAL();
         }
 
         /* GET USER INPUT */
@@ -92,6 +96,28 @@
                     Console.WriteLine($"{i}: fizzbuzz");
                 }
             }
+        }
+
+        /* CALCULATE FACTORIAL */
+        static void FACTORIAL()
+        {
+            // FORMULA: n! = n * (n-1)
+            int INPUT = Int32.Parse(Console.ReadLine());
+            /* CHECK IF INPUT IS A NEGATIVE VALUE */
+            if (INPUT < 0)
+            {
+                throw new Exception("Negative numbers are not allowed!");
+            }
+
+            /* INITIALIZE OUTPUT TO 1 SINCE 0! AND 1! ARE EQUAL TO 1 */
+            int OUTPUT = 1;
+
+            for (int index = 1; index <= INPUT; index++)
+            {
+                OUTPUT *= index;
+            }
+            
+            Console.WriteLine($"FACTORIAL OF {INPUT}: {OUTPUT}");
         }
     }
 }
